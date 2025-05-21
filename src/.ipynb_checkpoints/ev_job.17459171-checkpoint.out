@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/public/home/hpc244706074/.conda/envs/myproject/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/public/home/hpc244706074/.conda/envs/myproject/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/public/home/hpc244706074/myProject/model/evaluation.py", line 577, in <module>
+    
+  File "/public/home/hpc244706074/myProject/model/evaluation.py", line 565, in ev_SOTA
+    res = read_pkl(f'/public/home/hpc244706074/myProject/dataset/other_methods_pre/test_{ont}_{m}.pkl')
+  File "/public/home/hpc244706074/myProject/model/evaluation.py", line 112, in read_pkl
+    with open(pklfile,'rb') as fr:
+FileNotFoundError: [Errno 2] No such file or directory: '/public/home/hpc244706074/myProject/dataset/other_methods_pre/test_mf_deeppgozero.pkl'
+ATGO+
+Have done mf F_max: 0.6515524142290774 Aupr: 0.6644724038681155 threadhold: 0.23
+mf: aupr:0.664472,F_max:0.651552,threadhold:0.230000
+
+Have done bp F_max: 0.48079373992022423 Aupr: 0.43560619497865566 threadhold: 0.27
+mf: aupr:0.435606,F_max:0.480794,threadhold:0.270000
+
+Have done cc F_max: 0.6821279807630556 Aupr: 0.7165844361201387 threadhold: 0.36
+mf: aupr:0.716584,F_max:0.682128,threadhold:0.360000
+
+deepgose
+Have done mf F_max: 0.648270882556476 Aupr: 0.6214410302829935 threadhold: 0.32
+mf: aupr:0.621441,F_max:0.648271,threadhold:0.320000
+
+Have done bp F_max: 0.47111441409314014 Aupr: 0.462762998804629 threadhold: 0.34
+mf: aupr:0.462763,F_max:0.471114,threadhold:0.340000
+
+Have done cc F_max: 0.6995273346690736 Aupr: 0.685167507560092 threadhold: 0.45
+mf: aupr:0.685168,F_max:0.699527,threadhold:0.450000
+
+deeppgozero
