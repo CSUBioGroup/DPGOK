@@ -71,4 +71,4 @@ if __name__ == '__main__':
     for t in ['test', 'valid', 'train']:
         seq_file = f'../dataset/{t}_seq.fasta'
         output = f'../dataset/{t}_esm2.pkl'
-        main(seq_file,output,'/public/home/hpc244706074/esm2/esm2_t36_3B_UR50D.pt')
+        main(seq_file,output,'../esm2/esm2_t36_3B_UR50D.pt')

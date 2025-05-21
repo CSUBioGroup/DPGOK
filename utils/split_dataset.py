@@ -537,14 +537,14 @@ def main(uniprot_sport_file1,uniprot_sport_file2,uniprot_sport_file3,output_path
     
     
 if __name__=='__main__':
-    uniprot_sport_file1='../data_cache/uniprot_202201/uniprot_sprot.dat'
-    uniprot_sport_file2='../data_cache/uniprot_202301/uniprot_sprot.dat'
-    uniprot_sport_file3='../data_cache/uniprot_202405/uniprot_sprot.dat'
+    uniprot_sport_file1='../dataset/uniprot_202201/uniprot_sprot.dat'
+    uniprot_sport_file2='../dataset/uniprot_202301/uniprot_sprot.dat'
+    uniprot_sport_file3='../dataset/uniprot_202405/uniprot_sprot.dat'
     output_path='../dataset'
     if not os.path.exists(output_path):
         os.mkdir(output_path)
 
-    go_file='../data_cache/go.obo'
+    go_file='../dataset/go.obo'
 
     min_count_frequency={'bp':1,'cc':1,'mf':1}
     max_seqlen = 100000

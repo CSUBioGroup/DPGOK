@@ -406,18 +406,17 @@ def compute_performance_test(ont, go, all_terms, predscore, true_gos):
 
     df = pd.DataFrame(save_dict)
     # F_max, Aupr, threadhold = new_compute_performance(df, go, class_tag)
-    result_fmax, result_smin , result_aupr, result_icaupr, result_dpaupr, result_t = new_compute_performance(df, go, ont)
+    result_fmax, _ , result_aupr, result_icaupr, result_dpaupr, result_t = new_compute_performance(df, go, ont)
 
     print('Have done', ont, 
           'F_max:', result_fmax, 
           'Aupr:', result_aupr, 
-          'threadhold:', result_t,
-          'Smin:', result_smin,
+          'threadhold:', result_t
           'ICAupr:', result_icaupr,
           'DPAupr:', result_dpaupr,
          )
 
-    return result_fmax, result_smin , result_aupr, result_icaupr, result_dpaupr, result_t
+    return result_fmax , result_aupr, result_icaupr, result_dpaupr, result_t
 
 
 if __name__ == "__main__":
