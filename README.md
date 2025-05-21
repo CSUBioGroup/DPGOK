@@ -34,11 +34,11 @@ You'll need esm2_t36_3B_UR50D.pt file and save them into esm2 folder.
 
 ### Data Construction
 All data required save in ```./dataset```
-* [cc|mf|bp]_direct_parents_pairs.pkl and [cc|mf|bp]_ancestors_pairs.pkl  #graph data
-* [train|valid|test]_esm2.pkl  #esm features
+* `[cc|mf|bp]_direct_parents_pairs.pkl` and `[cc|mf|bp]_ancestors_pairs.pkl`  #graph data
+* `[train|valid|test]_esm2.pkl`  #esm features
 * select_min_count_1_[mf|bp|cc]_labels.csv  #all go terms
-* [train|valid|test]_data_separate.pkl #proteins information including proteinID, sequence, selected_terms, all_terms...
-* [train|valid|test]_seq.fasta  #protein sequence
+* `[train|valid|test]_data_separate.pkl` #proteins information including proteinID, sequence, selected_terms, all_terms...
+* `[train|valid|test]_seq.fasta`  #protein sequence
 
 Train/valid/test data of each ontology save in ```./dataset/[mf|bp|cc]```
 * `[train|valid|test]_data_separate_[mf|bp|cc]_gos.pkl`  #go names of each subset
