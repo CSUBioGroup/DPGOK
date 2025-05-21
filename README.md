@@ -20,16 +20,13 @@ If you encounter any bugs or issues, feel free to contact us.
 ### Generating the data
 If you like to generate a new dataset follow these steps:
 * Download [Gene Ontology](https://geneontology.org/docs/download-ontology/).
-
 You'll need go.obo file and save them into dataset folder.
 * Download [Uniprot-KB](https://ftp.uniprot.org/pub/databases/uniprot/previous_releases)
-
 You'll need three uniprot data by time stamps.
 * Run ```python split_data.py``` to split data into train, test, valid sets.
 * Run ```python generate_graph_data.py``` to get graph data.
 * Download [esm2_t36_3B_UR50D](https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t36_3B_UR50D.pt)
-
-You'll need esm2_t36_3B_UR50D.pt file and save them into esm2 folder.
+You'll need `esm2_t36_3B_UR50D.pt` file and save them into esm2 folder.
 * Run ```python extract_esm2.py``` to generate esm2 features.
 
 ### Data Construction
