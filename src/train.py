@@ -11,7 +11,7 @@ import random
 import os
 import argparse
 from data_load import dataSet
-from model import DuGProModel
+from model import DPGOK
 from evaluation import compute_performance
 
 class AverageMeter(object):
@@ -236,7 +236,7 @@ def train(ont, lr, n_epochs, class_nums, batch_size, dp_file, ac_file):
         go_adj4 = go_adj4.to(device)
 
     # init model
-    model = DuGProModel(class_nums, rel_num, go_adj1, go_adj2, go_adj3, go_adj4)
+    model = DPGOK(class_nums, rel_num, go_adj1, go_adj2, go_adj3, go_adj4)
     model.apply(weight_init)
     
     # Model on cuda
@@ -286,7 +286,7 @@ def train(ont, lr, n_epochs, class_nums, batch_size, dp_file, ac_file):
         
         #直接保存最后5轮的结果
         if epoch >= n_epochs-5:
-            torch.save(model.state_dict(),f'../saved_model/DuGPro_{ont}_count_{n_epochs-epoch-1}.dat' )
+            torch.save(model.state_dict(),f'../saved_model/DPGOK_{ont}_count_{n_epochs-epoch-1}.dat' )
         if f_max > best_fmax:
             best_fmax = f_max
             print(f"new best f_max:{f_max}(threadhold:{t_max})")

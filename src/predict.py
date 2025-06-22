@@ -1,6 +1,6 @@
 import torch
 from data_load import dataSet_test, read_pkl
-from model import DuGProModel
+from model import DPGOK
 import dgl
 import numpy as np
 import time
@@ -47,7 +47,7 @@ def predict(ont, class_nums, test_dataset, model_file, dp_file, ac_file, output_
         go_adj4 = go_adj4.to(device)
     
     # init model
-    model = DuGProModel(class_nums[ont], rel_num, go_adj1, go_adj2, go_adj3, go_adj4)
+    model = DPGOK(class_nums[ont], rel_num, go_adj1, go_adj2, go_adj3, go_adj4)
     model.load_state_dict(torch.load(model_file, map_location=torch.device('cpu')))
 
     # Model on cuda
@@ -108,18 +108,18 @@ if __name__ == "__main__":
                             protein_file=f'{BASE_PATH}/{ont}/test_data_separate_{ont}_proteins.csv')
     # predict
     for num in range(5):
-        output = f'../results/DuGPro_{ont}_res_{num}.pkl'
-        model_file=f'../saved_model/DuGPro_{ont}_count_{num}.dat'
+        output = f'../results/DPGOK_{ont}_res_{num}.pkl'
+        model_file=f'../saved_model/DPGOK_{ont}_count_{num}.dat'
         batch_size = 32
         predict(ont, class_nums, test_dataset, model_file, dp_file, ac_file, output, 32)
 
     # merge results
     res_list = []
     for num in range(5):
-        res = read_pkl(f'../results/DuGPro_{ont}_res_{num}.pkl')
+        res = read_pkl(f'../results/DPGOK_{ont}_res_{num}.pkl')
         res_list.append(res['preds'])
     final_res = merge_results(res_list)
-    with open(f'../results/DuGPro_{ont}_finalres.pkl','wb') as fw:
+    with open(f'../results/DPGOK_{ont}_finalres.pkl','wb') as fw:
         pkl.dump(final_res, fw)
 
     

@@ -1,4 +1,4 @@
-# DuGPro
+# DPGOK
 A Deep Learning-Based Method for Protein Function Prediction by Fusing GO Knowledge and Protein Features
 
 ## Usage
@@ -8,7 +8,7 @@ If you encounter any bugs or issues, feel free to contact us.
 
 ## Dependencies
 * The code was developed and tested using python 3.10.
-* Clone the repository: https://github.com/CSUBioGroup/DuGPro.git
+* Clone the repository: https://github.com/CSUBioGroup/DPGOK.git
 * Create virtual environment with Conda or python3-venv module.
 * Install PyTorch, DGL and other requirements: ``` conda create --name new_env --file requirements.txt ```
 

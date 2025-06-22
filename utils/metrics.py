@@ -442,6 +442,6 @@ if __name__ == "__main__":
             s_plabels[p] = p_label[p]
         term_file = f'../dataset/select_min_count_1_{ont}_labels.csv'
         all_terms = list(pd.read_csv(term_file)['functions'])
-        res = read_pkl(f'../results/DuGPro_{ont}_finalres.pkl')
+        res = read_pkl(f'../results/DPGOK_{ont}_finalres.pkl')
         compute_performance_test(ont, go, all_terms, res, s_plabels)
         

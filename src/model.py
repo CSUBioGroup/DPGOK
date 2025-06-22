@@ -123,9 +123,9 @@ class ESM_MLP(nn.Module):
         output = self.output_layer(pro_esm2)
         return output
 
-class DuGProModel(nn.Module):
+class DPGOK(nn.Module):
     def __init__(self, class_nums, rel_num, g1, g2, g3, g4):
-        super(DuGProModel, self).__init__()
+        super(DPGOK, self).__init__()
         self.dropout = 0.2
         self.go_num = class_nums
         self.embed_dim = 128
