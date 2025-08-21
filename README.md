@@ -14,7 +14,7 @@ If you encounter any bugs or issues, feel free to contact us.
 
 ## Prepare Data
 ### Using our dataset
-* Download the [dataset.tar.gz](https://drive.google.com/uc?export=download&id=1t7bwxzmY1zF0IE0CnJp3igw7ISmZ_456)
+* Download the [dataset.tar.gz](https://drive.google.com/file/d/1t7bwxzmY1zF0IE0CnJp3igw7ISmZ_456/view?usp=drive_link)
 * Extract ```tar xvzf dataset.tar.gz```
 
 ### Generating the data
@@ -62,7 +62,7 @@ python predict.py --ont cc
 arguments:
     --ont: the ontology(mf/bp/cc)
 ```
-If you use our trained model, please first download [saved_model](https://drive.google.com/uc?export=download&id=1wmHozZd7iDDgoOaHwkOwR8RAz1) and save them into saved_model folder.
+If you use our trained model, please first download [saved_model](https://drive.google.com/file/d/1vCSxP2rrhQrcYawUrrQGln5Y0DlAxbD8/view?usp=drive_link) and save them into saved_model folder.
 
 ## Evaluation
 * We provide Fmax, AUPR, IC_AUPR and DP_AUPR metrics to evaluate the performance. 
